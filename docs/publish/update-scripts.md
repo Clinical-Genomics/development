@@ -42,7 +42,7 @@ pip install -U git+https://github.com/Clinical-Genomics/trailblazer@$BRANCH
 You run it:
 ```bash
 cd ~/servers/resources
-sh update-trailblazer-stage.sh
+sh update-trailblazer-stage.sh all
 ```
 
 Or you update stage to a specific branch:
