@@ -42,7 +42,7 @@ pip install -U git+https://github.com/Clinical-Genomics/trailblazer@$BRANCH
 You run it:
 ```bash
 cd ~/servers/resources
-sh update-trailblazer-stage.sh all
+sh update-trailblazer-stage.sh
 ```
 
 Or you update stage to a specific branch:
@@ -123,7 +123,7 @@ All databases are located on clinical-db. To make sure you have the latest uncor
 On clinical-db, copying all databases:
 ```
 cd ~/servers/resources
-bash dbcopy-prod-to-stage.sh
+bash dbcopy-prod-to-stage.sh all
 ```
 
 On clinical-db, copy one database:
