@@ -123,7 +123,7 @@ All databases are located on clinical-db. To make sure you have the latest uncor
 On clinical-db, copying all databases:
 ```
 cd ~/servers/resources
-bash dbcopy-prod-to-stage.sh
+bash dbcopy-prod-to-stage.sh all
 ```
 
 On clinical-db, copy one database:

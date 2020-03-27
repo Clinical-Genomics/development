@@ -23,9 +23,9 @@ Collect the suggested changes in TODO lists, questions for the code author, and 
 
 ## Workflow
 
-We are on a bi-weekly schedule with 2 pull request responsibles. Their job is to review all pull requests that are requested to be merged and put into production.
+The code needs to be reviewed and approved by a code owner. They are automatically assigned when you create the pull request.
 
-The person reviewing the code signs off on the pull request with a "👍" or simliar and then merges the code.
+The person reviewing the code [signs off][sign-off] on the pull request with a "👍" or similar.
 
 > Hot fixes are excluded from code reviews and can be merged by the author herself.
 
@@ -34,3 +34,4 @@ The person reviewing the code signs off on the pull request with a "👍" or sim
 Aim to discover mistakes as early as possible. This includes running lints, checking for conformance to style guide, etc. Encourage team members to run these tools locally as well as considering them as part of your continuous integration flow. It can also be worth mentioning that it's often easier to take criticism from computers rather than your peers.
 
 [thoughtbot]: https://github.com/thoughtbot/guides/tree/master/code-review
+[sign-off]: ../publish/sign-off.md

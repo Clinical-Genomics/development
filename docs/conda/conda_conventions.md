@@ -1,15 +1,34 @@
 # Conda conventions
 
-- Avoid installing anything in the conda default environment (root) if possible
-- Naming conventions for conda environments: 
-   - Production: `[env_type=P]_[logical_name]_[creation_date]`
-   - Development: `[env_type=D]_[logical_name]_[creation_date]_[signature]`
-   - Archive: `[env_type=A]_[logical_name]_[timestamp]_[signature]`
-      - env_type: environment types are
-        - **D** (Develop),
-        - **P** (Production),
-        - or **A** (Archive).
-      - creation_date: `%y%m%d`
-      - timestamp: `%y%m%d %H%M%S`.
-      - logical_name: whatever makes sense.
-      - signature: something to show who created the environment. Use the two- or three letter name acronyms assigned to you.
+This document describes how to name your conda environments.
+
+Examples:
+
+Production environment for microsalt:
+```
+P_usalt
+```
+
+Stage environment for microsalt:
+```
+S_usalt
+```
+
+A development environment for microsalt:
+```
+D_fix-microbial-coverage_190517_IS
+```
+
+## Naming conventions 
+
+   - Production: `P_[name]`
+   - Stage: `S_[name]`
+   - Development: `D_[name]_[creation_date]_[signature]`
+   - Archive: `A_[name]_[timestamp]_[signature]`
+
+With:
+
+   - creation_date: `%y%m%d`
+   - timestamp: `%y%m%d %H%M%S`.
+   - name: whatever makes sense.
+   - signature: showing who created the environment. Use the two- or three letter name acronyms assigned to you.

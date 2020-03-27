@@ -2,16 +2,17 @@
 Perlbrew is a tool to manage multiple perl installations. Allowing for testing your production code against different perl versions, while leaving the vendor perl alone. You can even run your programs against all installations of perl. 
 
 ## Perl
-Install a specific perl version and use it as default.
+Install a specific perl version.
 ```Bash
 $ perlbrew install perl-5.26.0
-$ perlbrew switch perl-5.26.0
 ```
 
 Use a specific perl version in your current shell, run:
 ```Bash
 $ perlbrew use perl-5.26.1
 ``` 
+
+> We are disallowing the use of `perlbrew switch` completely. This will change the environment for all people on the machine and now just for your own user!
 
 ## Cpanm
 Is a lightweigth CPAN client, which facilitates installing CPAN perl modules. It is a good idea to install it together with Perlbrew to always make them available across each your perlbrew perl installations i.e the CPANM library will change with the perlbrew switch command. 

@@ -19,20 +19,20 @@ Title:
 
 ## Title
 
-Describe the issue in a sentence that summarises the issue
-- Example: Clinical-Genomics - Missing feedback on failed login 
+Describe the issue in a sentence that summarises the wanted outcome
+- Example: Clinical-Genomics - Failing login gives me understandable feedback  
 
 ## Steps to reproduce
 
-Describe the steps that are needed to provoke the encountered issue so that anyone can reproduce the issue. 
-Any special circumstances that you think is affecting the outcome should be described (e.g. environment/browser etc.) 
-Example: 
+Describe the steps that are needed to provoke the encountered issue so that anyone can reproduce the issue.
+Any special circumstances that you think is affecting the outcome should be described (e.g. environment/browser etc.)
+Example:
 1. Go to Clinical-Genomics in production environment (https://clinical.scilifelab.se) with a web browser
 1. Press "Sign in with Google"
 1. Select any of your accounts that don't have access to the system
 
-The aim is to guide the reader towards the problem without having to spend any time on figuring out how or 
-having to communicate with the issue reporter on what to do to provoke the system in order to reproduce the issue. 
+The aim is to guide the reader towards the problem without having to spend any time on figuring out how or
+having to communicate with the issue reporter on what to do to provoke the system in order to reproduce the issue.
 
 ## Expected outcome
 
@@ -47,7 +47,7 @@ the problem. (E.g. Is it something that relates to this specific user or somethi
 
 - Example: There is no message at all about what went wrong when I tried to login
 
-> A screenshot of the outcome can often be of great help for the reader to understand what you see 
+> A screenshot of the outcome can often be of great help for the reader to understand what you see
 
 
 1: https://www.mountaingoatsoftware.com/agile/user-stories

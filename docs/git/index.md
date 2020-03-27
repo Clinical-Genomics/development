@@ -40,13 +40,13 @@ If you are working locally (your computer only), you could also add the `--globa
 
 ## Create a new repository
 
-There are several ways how one can create a new local repository
+There are several ways to create a new local repository.
 
 ### Create a new repository from scratch
 
 Create a directory with the name of the new repository and enter it from the command line. To initialize the repository type:
 
-```bash
+```git
 git init
 ```
 
@@ -54,65 +54,12 @@ This command will create a .git subfolder.
 
 ### Clone a repository from a project in the clinical-genomics GitHub organisation
 
-```
+```git
 git clone https://github.com/clinical-genomics/development.git
 ```
 
 Where the url which can be obtained from the web page of your local fork, by clicking on the "clone or download" green button.
 The git clone command then creates a folder with the project and pulls the latest data from your fork in it.
-
-### Clone any other repository
-
-When you are contributing to an existing repository, the first thing you should do is forking this repository to your github space. A fork is basically a copy of the original project, on which you can experiment as much as you want without changing the original project.
-
-[how to fork a repository](https://guides.github.com/activities/forking)
-
-Then clone your fork.
-
-```
-git clone https://github.com/[your user name]/development.git
-```
-
-#### Keep your fork up to date
-
-Before committing and pushing changes to your remote repository you should check that you are working on an updated version of it. To update your fork follow these instructions:
-
-First you need to get the latest version of the original project you forked from.
-To do so, from command line move to the main folder containing your project and type:
-
-```bash
-git remote add upstream path/to/repo/you/forked/from
-git fetch upstream
-git pull upstream master
-git pull upstream develop
-# develop is the version you start from for your work!
-```
-
-You don't have to call the remote "upstream" but you can chose any name for it. To visualize all remotes you are working with and their respective shortnames use the command:
-
-```bash
-git remote -v
-```
-
-To remove remotes instead, use the command "git remove rm":
-
-```bash
-git remote rm name_of_remote
-```
-
-After pulling data from the remote your local copy of the repo should be up-to-date with the upstream. Now you need to update your fork (the copy existing online, in GitHub) accordingly.
-
-If you wish to update you master branch on your fork, for instance, you'd type these commands:
-
-```bash
-# be sure to place yourself in your master branch
-git checkout master
-git rebase upstream/master
-git push
-```
-
-You use the same commands to update any other branch of your forked repository.
-
 
 ## Git data transport structure and commands
 
@@ -120,30 +67,28 @@ The following image shows the structure of the git commands and spaces:
 
 ![Overview](http://images.osteele.com/2008/git-transport.png)
 
-Your workspace is the folder that holds the actual working files while the "index" is the space is a staging area where you add your changes before committing them to the local repository or "head". To send the changes to your remote repository you use the "push" command.
+Your workspace is the folder that holds the actual working files while the "index" is the space is a staging area where you add your changes before committing them to the local repository or `HEAD`. To send the changes to your remote repository you use the "push" command.
 
 Here is a link to a page explaining the common Git terminology: [https://help.github.com/articles/github-glossary](https://help.github.com/articles/github-glossary)
-
 
 ## Create a new branch or feature for your work
 To create a new branch, from command line move to the main folder containing your project and type:
 
-<pre>
-<b>git checkout -b name_of_your_feature develop</b>
-</pre>
+```git
+git checkout -b name_of_your_feature
+```
 
 If everything went fine then you'll get the following message: "Switched to a new branch name_of_your_feature". This means you are already inside the new feature. To make sure that you are in the right branch type:
 
-<pre>
-<b>git branch</b>
-</pre>
+```git
+git branch
+```
 
 Whenever you want to move to another branch/feature the command is:
 
-<pre>
-<b>git checkout [my-topic]</b>
-</pre>
-
+```git
+git checkout [my-branch]
+```
 
 ## Make changes and commit them to your local repository
 
@@ -152,59 +97,61 @@ After you are satisfied with your code you can start to commit to the remote rep
 
 To check that there are actually changes to add and commit, type:
 
-<pre>
-<b>git status</b>
-</pre>
+```git
+git status
+```
 
 This command will give you info on the status of your working directory comparing it with the local and remote repositories.
 
 To update the local repository to the latest status, by fetchin and merging remote changes, type:
 
-<pre>
-<b>git pull</b>
-</pre>
+```git
+git pull
+```
 
 The you can start adding your changes to the index with the command:
 
-<pre>
-<b>git add filename_to_send_to_index</b>
-</pre>
+```git
+git add filename_to_send_to_index
+```
 
 The process of adding a file to the index is also called staging. Be sure to add all the files you want to include to the index.
 Before merging the changes you can preview them with the command:
 
-<pre>
-<b>git diff source_branch target_branch</b>
-</pre>
+```git
+git diff source_branch target_branch
+```
 
 Calling the "diff" command without arguments will list all the differences between the index and your workspace, i.e. all the files that you could add to the index.
 
 To commit changes from the index to the local repository (HEAD), type:
 
-<pre>
-<b>git commit</b>
-</pre>
+```git
+git commit
+```
 
 Alternatively you can add and commit the files to the local repository in only one command:
 
-<pre>
-<b>git commit -a</b>
-</pre>
+```git
+git commit -a
+```
 
-NOTE: Be very careful with the above command, since it gives you less control over the single steps of the workflow and the files you really want to commit.
-Before using it, make sure everything is under control by using the "git status" and "git diff" commands. Prevent commiting tmp files your editor makes!
+> ProTip
+>
+> Don't use `git commit -a` unless you're 100% sure of what you're doing. It gives you less control over the single steps of the workflow and the files you really want to commit.
+Before using it, make sure everything is under control by using the `git status` and `git diff` commands. Prevent commiting tmp files your editor makes!
 
-To include a description of the commit use the -m flag
+To include a description of the commit use the -m flag. Leaving it out is fine and will drop you into an `$EDITOR`.
 
-<pre>
-<b>git commit -m "Example of a commit message"</b>
-</pre>
+```git
+git commit -m "Example of a commit message"
+```
 
 It is possible to close a GitHub issue by referencing it in a commit message or pull request. The issue will be closed when the code is merged to the default branch
 
-<pre>
-<b>git commit -m "Fixes #36"</b>
-</pre>
+```git
+git commit -m "Fixes #36"
+```
 
 For more examples on how to close issues using keywords see this [guide][issue-closing].
 
@@ -212,41 +159,9 @@ For more examples on how to close issues using keywords see this [guide][issue-c
 
 After "git add" and "git commit", or "commit -a", your changes are in the HEAD of your local repository. To send them to the remote repository use the command "push":
 
-<pre>
-<b>git push</b>
-</pre>
-
-## Create a pull request to the parent repository
-
-You create a "pull request" when you want to propose the introduction of your changes to the repository where your project was cloned or forked from. Pull requests are created on github on the page of the github repository. By default pull requests are directed to the default branch (master). For a more detailed explanation of pull requests visit the Github help page.
-
-Once the pull request is merged and closed you can safely remove the branch you've been working on.
-To remove a generic branch both remotely and locally type:
-
-<pre>
-<b>git branch -d name_of_your_branch                #removes it locally</b>
-<b>git push origin --delete name_of_your_branch     #removes it remotely</b>
-</pre>
-
-It is possible to close a GitHub issue by referencing it in a pull request title or description, e.g. "Fixes #46". The issue will be closed when the code is merged to the default branch. A more in-depth description can be found in this [guide][issue-closing].
-
-## Github usage references
-
-Github short guide: (https://guides.github.com/activities/hello-world)<br>
-Github book:        (https://git-scm.com/book/en/v2)<br>
-GitHub help page:   (https://help.github.com)<br>
-Glossary:           (https://help.github.com/articles/github-glossary)
-
-## How to write Github documentation
-
-**Markdown** is the documentation format of choice for code on GitHub. If you want to live-preview files in the format they will show up before pushing you can use the handy [Grip][grip] tool. It super easy to use! All you need to do is:
-
-<pre>
-<b>pip install grip
-# cd to your project directory
-grip
-# open your web-browser at http://localhost:6419</b>
-</pre>
+```
+git push
+```
 
 ## .gitignore
 
@@ -254,7 +169,13 @@ This is a special file that's usually part of every repo. Here you can tell git 
 
 GitHub hosts a [brief guide][gitignore] about the format. There's also a great resource for finding [templates][gitignore-templates] for every language to use as starting points.
 
-[grip]: https://github.com/joeyespo/grip
+## Github usage references
+
+ - [Github short guide](https://guides.github.com/activities/hello-world)
+ - [Github book](https://git-scm.com/book/en/v2)
+ - [GitHub help page](https://help.github.com)
+ - [Glossary](https://help.github.com/articles/github-glossary)
+
 [gitignore]: https://help.github.com/articles/ignoring-files
 [gitignore-templates]: https://www.gitignore.io
 [issue-closing]: https://help.github.com/articles/closing-issues-using-keywords

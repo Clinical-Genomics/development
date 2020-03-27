@@ -5,7 +5,7 @@ git clone -b <branch name> https://github.com/Clinical-Genomics/development.git
 cd development
 conda create -n D_mkdocs
 source activate D_mkdocs
-pip install mkdocs
+pip install -r requirements.txt
 mkdocs serve
 ```
 

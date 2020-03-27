@@ -6,7 +6,7 @@
 
 > The official guide has some very nice tips on [code layout][code-layout]. This can be a nice reference when you are unsure about how to e.g. style your hanging indents.
 
-Futhermore, we use Python 3.6+. We encourage the use of type annotations (even if it doesn't cover 100% of your functions) and the new format strings:
+Futhermore, we use Python 3.7+. We encourage the use of type annotations (even if it doesn't cover 100% of your functions) and the new format strings:
 
 ```python
 name = 'Paul Anderson'
