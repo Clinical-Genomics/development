@@ -39,6 +39,12 @@ This will drop you into a `vim` session.
 ```
 See [Cron][cron] for more explanation on crontab's format.
 
+## command to execute
+
+Quite often the command is a bash script that you want to execute, bash scripts goes under 
+servers/resources/yourserver/crontabs and needs to be executable. 
+Do a `chmod ugo+x yourscript.sh ` and commit it to github to make it executable. 
+
 ## Errors!
 
 You really want to be notified when your automation goes wrong. This line will add an email address to the crontab[^1].
