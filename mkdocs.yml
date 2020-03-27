@@ -39,6 +39,11 @@ nav:
 #    - How to write documentation?  -
 #  - How to run on stage?
 #    - How to use databases?
+  - How to lint your code?:
+    - Motivation: "lint/README.md"
+    - In python: "lint/python.md"
+    - In bash: "lint/bash.md"
+    - Automate linting with TravisCI: "travis/README.md"
   - How to integrate two tools?: 'dev/integration.md'
   - How to publish your tool?:
     - How to publish your tool?: 'publish/prod.md'
