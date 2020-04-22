@@ -4,8 +4,9 @@
 * [Documentation](documentation/README.md)
 * [Databases](databases/README.md)
   * [Mysql](databases/mysql.md)
-* [Git](git/README.md)
+* [Github]
   * [Code Review](git/code-review.md)
+  * [Repository](github/repository.md)
 * [Conda](conda/README.md)
   * [Conventions](conda/conda_conventions.md)
   * [Confinement](conda/confinement.md)

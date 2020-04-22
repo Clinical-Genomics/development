@@ -56,10 +56,10 @@ nav:
     - How to update configuration?: 'publish/servers.md'
 #  - What are the security concerns?
   - How do we use github?:
+    - Setting up a github repository?: 'dev/repository.md'
     - How to make a pull request?: 'github/pr.md'
     - How to request a pull request review?: 'github/pr-request.md'
     - Pull request etiquette: 'github/pr-etiquette.md'
-    - Checklist for a github repository: 'dev/project.md'
   - Other recommendations?:
     - What if I need perl?: perl/README.md
     - What are perl's best practices?: perl/best_practises/best_practises.md
