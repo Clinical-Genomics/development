@@ -18,7 +18,7 @@ nav:
   - Home: 'index.md'
 #  - Where do I develop?
   - What are the commonly used tools?: 'tools/README.md'
-  - Choose a development workflow:
+  - Choose a branching model:
     - Overview: 'dev/models.md'
     - github flow: 'dev/githubflow.md'
     - git flow: 'dev/gitflow.md'
@@ -45,14 +45,15 @@ nav:
     - In bash: "lint/bash.md"
     - Automate linting with TravisCI: "travis/README.md"
   - How to integrate two tools?: 'dev/integration.md'
-  - How to publish your tool?:
-    - How to publish your tool?: 'publish/prod.md'
+  - How to back-up an conda env in production?: "production/back-up-production-env.md"
+  - How to install your tool?:
+    - In production?: 'publish/prod.md'
 #    - CHANGELOG
 #    - How to make a Python package?
 #    - How to bumpversion?
     - How to automate running your tool?: 'publish/crontab.md'
     - How make updating your tool easy?: 'publish/update-scripts.md'
-    - Who can sign off on tests, reviews and deploys?: 'publish/sign-off.md'
+    - Approving PRs: 'publish/approving-prs.md'
     - How to update configuration?: 'publish/servers.md'
 #  - What are the security concerns?
   - How do we use github?:

@@ -94,4 +94,4 @@ Once merged, Pull Requests preserve a record of the historical changes to your c
 [merge]: ../github/merge.png
 [closing issues]: https://help.github.com/en/articles/closing-issues-using-keywords
 [update scripts]: ../publish/update-scripts.md
-[sign off]: ../publish/sign-off.md
+[sign off]: ../publish/approving-prs.md

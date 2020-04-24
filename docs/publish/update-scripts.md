@@ -2,53 +2,20 @@
 
 You will want to create two scripts, at least:
 
-- one to update your tool on stage
-- one to update your tool on prod
-
-Yes, I just wrote that out in full. It's that important!
+- One to update your tool on prod: [update-YOUR_TOOL.sh](https://github.com/Clinical-Genomics/servers/resources/update-TEMPLATE-prod.sh)
+- One to update your tool on stage: [update-YOUR_TOOL-stage.sh](https://github.com/Clinical-Genomics/servers/resources/update-TEMPLATE-stage.sh)
 
 ## Stage CLI update script
 
-How does such a script look like. Well, let's have a look at one that closest resembles a template, `update-trailblazer-stage.sh`
+Start from the templetes above. Copy to the server-folder where it should be used and rename it according to the naming convention above. 
+Replace the word `YOUR_TOOL` with your tool in the file name.
+Within the script replace the word `tool` and `server.scilifelab.se` with relevant names e.g. `cg`
+ and `hasta.scilifelab.se`
 
+Update stage to a specific branch:
 ```bash
-#!/usr/bin/env bash
-
-# exit on error
-set -e
-
-# make sure we run as hiseq.clinical
-sh ./assert_user.sh hiseq.clinical
-
-# make sure we run on rasta. Leave this assert out if this script can be run on all servers.
-sh ./assert_host.sh rastapopoulos.scilifelab.se
-
-# One optional argument
-BRANCH=${1}
-
-# make sure we can have access to aliases
-shopt -s expand_aliases
-
-# make sure we are closely resembling production
-source ~/.bashrc
-
-# go to stage. Yes, this conda env should already exist
-source activate stage
-
-# install with latest changes on "master"
-pip install -U git+https://github.com/Clinical-Genomics/trailblazer@$BRANCH
-```
-
-You run it:
-```bash
-cd ~/servers/resources
-sh update-trailblazer-stage.sh
-```
-
-Or you update stage to a specific branch:
-```bash
-cd ~/servers/resources
-sh update-trailblazer-stage.sh beta
+cd ~/servers/resources/hasta.scilifelab.se
+sh update-cg-stage.sh beta
 ```
 
 ### Web update script
@@ -106,7 +73,7 @@ with $component the name of your component, be it `trailblazer` for the cli or `
 
 ## What about config files?
 
-Premade config files for all packages used in production and stage have been made in the `config` dir of the servers repo. This can be found on rasta and clinical-db in the same location:
+Premade config files for all packages used in production and stage have been made in the `config` dir of the servers repo. This can be found on hasta and clinical-db in the same location:
 
 ```
 cd ~/servers/config
@@ -152,15 +119,4 @@ The mongo-stage server is not running by default. To start the mongo-stage run:
 ```
 cd ~/servers/resources
 bash start-mongo-stage.sh &
-```
-
-## So, what is beta?
-
-The beta environment, for now, is not an environment at all. It is a bunch of branches in git for cg and trailblazer that are affected by the MIP6/Scout4 update.
-
-To update stage to use those branches, run
-
-Rasta:
-```
-bash update-beta.sh
 ```

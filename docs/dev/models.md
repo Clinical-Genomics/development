@@ -17,7 +17,7 @@ As a team, does the workflow
 
 Based on the answers of these questions, we are recommending two kinds of branching workflows.
 
-To understand this documentation, knowledge of git and branching is recommended! Why don't you read up on our [git][git] page?
+To understand this documentation, knowledge of git and branching is recommended! Why don't you read up on our [github][github] page?
 
 ## Shared repository model
 
@@ -67,7 +67,7 @@ When would you use git flow?
 
 Do you want to [know more][gitflow]?
 
-[git]: ../../git/
+[github]: ../github/github.md
 [gitflow]: gitflow.md
 [githubflow]: githubflow.md
 [githubflow-image]: createbranch.png

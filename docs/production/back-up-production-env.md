@@ -1,8 +1,8 @@
-# How to push to production?
+# How to back-up a conda environemnt in production?
 
 ... and rollback if things go haywire!
 
-## Create envrinment file
+## Create an environment file
 
 Take a snapshot of the current conda env! Go to `~/servers/resources`:
 
@@ -36,6 +36,6 @@ See [conda create](https://conda.io/docs/commands/env/conda-env-create.html)
 
 ## How to push to production?
 
-Don't!
+See [How to install your tool in production][publish_prod]
 
-The responsibility lies with the deployment officer.
+[publish_prod]: ../../publish/prod
