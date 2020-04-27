@@ -6,7 +6,8 @@
 1. Merge and deploy together with a code owner of the repository you are pushing changes to
 
 ## Hasta
-Prerequisuites: 
+Prerequisuites:
+
 - All update scripts are in `/home/proj/production/servers/resources/hasta.scilifelab.se`
 - Your intended conda env must exist before using an update script as they will not create a new one
 
