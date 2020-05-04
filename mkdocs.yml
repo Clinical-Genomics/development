@@ -9,7 +9,7 @@ markdown_extensions:
       base_path: docs
 
 theme:
-  name: 'readthedocs'
+  name: 'material'
   palette:
     primary: 'blue grey'
     accent: 'cyan'
