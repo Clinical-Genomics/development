@@ -1,22 +1,21 @@
-# Approving PRs
+# Approving PRs going into production
 
 
 All tools developed at clinical genomics need to be tested, reviewed and deployed according to a specific routine which is generally outlined under ["How to install your tool in production"][prod].
- These three things also need a sign-off; _Code Reviewed by_, _Tests Executed by_ and _Merge and Deploy_.
-  For tools used in production this is especially important. 
-  There are different branching models used at Clinical Genomics and depending on which you use the sign-offs happen at slightly different steps in the update process.
-  
+ 
+When on a branch that will be merged and deployed to production - these three things also need a sign-off; _Code Reviewed by_, _Tests Executed by_ and _Merge and Deploy_. 
+There are different branching models used at Clinical Genomics and depending on which you use the sign-offs happen at slightly different steps in the update process.
   
   For functions and signatures (see AM document `1047 Functions and signature list`)
 
 ### Signing-off on code reviews
-* Code owner(s) of the specific repository
+* Code owner(s) or responsible in AM #1098 of the specific repository
 
 ### Signing-off on test results
 * Anyone with enough knowledge to make a critical review
 
 ### Signing-off on merge and deploy
-* Code owner(s) of the specific repository
+* Code owner(s) or responsible in AM #1098 of the specific repository
 
 ### Signing-off AM Validations
 * Validation and implementation plan - Management team member, Facility manager and Quality control manager.
@@ -33,9 +32,9 @@ In this model the sign-offs of patch and minor versions all happen in the pull r
 ### Approving
 This process is described in more detail in ["How to install your tool in production"][prod].
 
-   - The code owner ticks the box when the code has been deemed adequate and signs it 
+   - The code owner or responsible in AM #1098 ticks the box when the code has been deemed adequate and signs it 
    - The person carrying out the tests on stage according to the test case described in the pull request can tick off the "tests executed box"  and sign it, when the tests meet the pass criteria.
-   - The code owner ticks the "merge/deploy" box approves the pull request and signs it.
+   - The code owner or responsible in AM #1098 ticks the "merge/deploy" box approves the pull request and signs it.
 
 ![sign-offs](pr_tickboxes.png)
 
@@ -46,10 +45,10 @@ To merge a major version into master - AM Test specification and implementation 
 In this model several pull requests are bunched in the same release and it is therefore necessary to do the sign-offs in three steps:
 
 ### Development branch
-- First pull request to add changes to the development branch - sign-offs needed are on code review, testing and merge as described under Github flow.
+- Pull request to add changes to the development branch - perform code review and testing before merging as described under Github flow.
 
 ### Master branch
-- AM Test specification and implementation plan are needed on system testing (testing of the release branch to be deployed) and the approved decision to merge to master and deploy the code.
+- AM Test specification and implementation plan are needed on system testing (testing of the release branch to be deployed) and the approved decision to merge to master and deploy the code to production.
 - Merging patches to master do not need AM validations and follows the same procedure as github flow for patches.
 
 

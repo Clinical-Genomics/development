@@ -1,6 +1,9 @@
 # Repository Guidelines @clinical-Genomics
 
-This is a list containing all items that need to be set up so that repositories are compatible with AM `1042 Verifications and Validations`.
+## Mandatory
+- Add responsible and deputy of the repository to AM doc #1098.
+
+This is a list containing all items that are **highly** recommended to be set up for Clinical Genomics repositories.
 
 1. **Add code owners**:
 The repository should have at least two active contributors that understand the code and help review and sign off on changes (merges to master and releases). You can document this with code owners in the `.github/CODEOWNERS` document (read up on [codeowners](https://help.github.com/en/articles/about-code-owners)), or through GitHub contributions and write permissions. This involves testing and code review. Testing can be done by the user proposing changes, but as with all good peer review, this is not ideal. See also AM doc #1098.
@@ -18,7 +21,7 @@ The repository should have a pull request template in `.github/PULL_REQUEST_TEMP
     - For version bumps, motivate according to your versioning scheme. E.g. in SemVer this is a major|minor|path version because ...
     - Code review approval
     - Signoff tickboxes for code review, test status, and 
-    - If merging to a branch that will be deployed in production sign off on deployment, consider using a tickbox for deploy readiness
+    - If merging to a **branch** that will be **deployed** in **production** sign off on deployment, consider using a tickbox for deploy readiness
     
 1. **Labels**: The repository should have these labels:
 
@@ -38,7 +41,7 @@ The repository should have a pull request template in `.github/PULL_REQUEST_TEMP
 | Refactor | Light green | 74f79b |
 
 
-### Optional but recommended steps
+### More recommended features
 
 1. **Add a issue template**:
 The repository could have an issue template e.g. [cg](https://github.com/Clinical-Genomics/cg/issues/new?template=user-story.md)

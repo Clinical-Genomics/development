@@ -1,9 +1,10 @@
-# How to install your tool in production?
+# How to install your tool in production (deployment)?
 
 ## Rules
-1. Always get code review approval from a code owner of the tool that you are pushing changes to
+1. Always get code review approval from a code owner or responsible in AM #1098 of the tool that you are deploying
 1. Announce the change and document the change in behaviour in AM or github accordingly
 1. Merge and deploy together with a code owner of the repository you are pushing changes to
+1. Use an [update script][update-script] (recommended) or an otherwise well documented installation process in AM
 
 ## Hasta
 Prerequisuites:
@@ -38,5 +39,6 @@ Prerequisuites:
     
 Installing the tool an update script will log the deploy.
 
+[update-script]: update-scripts.md
 [pr]: ../../github/pr
 [pr-review]: ../../github/pr-request
