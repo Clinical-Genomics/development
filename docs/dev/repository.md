@@ -2,6 +2,7 @@
 
 ## Mandatory
 - Add responsible and deputy of the repository to AM doc #1098.
+- The repository must state the versioning scheme followed i.e. [semantic versioning](https://semver.org/) in the `CONTRIBUTING` doc.
 
 This is a list containing all items that are **highly** recommended to be set up for Clinical Genomics repositories.
 
@@ -12,7 +13,7 @@ The repository should have at least two active contributors that understand the 
 The repository should state the branching model used for the repository in the `CONTRIBUTING` doc. Here are the ones commonly used at Clinical Genomics [branching models](models.md). Please describe your branching model in this guide. See AM doc #1042.
 
 1. **Versioning**:
-The repository should state the versioning scheme followed e.g. [semantic versioning](https://semver.org/) in the `CONTRIBUTING` doc. For example, bump version on each change on master, e.g. use the [bumpversion package](https://github.com/peritus/bumpversion) to automate bumping and tagging. This should follow the choosen branching model. Ensure that archived releases are made of each version you intend to deploy, and ideally all.
+Automate version version increments using e.g. the [bumpversion package](https://github.com/peritus/bumpversion) for bumping and tagging. This should follow the choosen branching model. Ensure that archived releases are made of each version you intend to deploy, and ideally all.
 
 1. **Add a pull request template**: 
 The repository should have a pull request template in `.github/PULL_REQUEST_TEMPLATE`, e.g [servers](https://github.com/Clinical-Genomics/servers/blob/master/.github/PULL_REQUEST_TEMPLATE), that includes:
@@ -21,7 +22,7 @@ The repository should have a pull request template in `.github/PULL_REQUEST_TEMP
     - For version bumps, motivate according to your versioning scheme. E.g. in SemVer this is a major|minor|path version because ...
     - Code review approval
     - Signoff tickboxes for code review, test status, and 
-    - If merging to a **branch** that will be **deployed** in **production** sign off on deployment, consider using a tickbox for deploy readiness
+    - If merging to a **branch** that will be **deployed** in **production** sign off on deployment and implementation is the person who merges to the production ready branch. Consider using a tickbox for deploy readiness to make it extra clear.
     
 1. **Labels**: The repository should have these labels:
 
