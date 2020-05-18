@@ -10,3 +10,8 @@ mkdocs serve
 ```
 
 go to your browser: http://127.0.0.1:8000
+
+Publishing the changes when you are done:
+```
+mkdocs gh-deploy
+```
