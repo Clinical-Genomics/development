@@ -16,19 +16,18 @@ S_usalt
 
 A development environment for microsalt:
 ```
-D_fix-microbial-coverage_190517_IS
+D_fix-microbial-coverage_IS
 ```
 
 ## Naming conventions 
 
    - Production: `P_[name]`
    - Stage: `S_[name]`
-   - Development: `D_[name]_[creation_date]_[signature]`
+   - Development: `D_[name]_[signature]`
    - Archive: `A_[name]_[timestamp]_[signature]`
 
 With:
 
-   - creation_date: `%y%m%d`
    - timestamp: `%y%m%d %H%M%S`.
    - name: whatever makes sense.
    - signature: showing who created the environment. Use the two- or three letter name acronyms assigned to you.
